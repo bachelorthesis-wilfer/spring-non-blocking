@@ -1,15 +1,11 @@
-
-# Setup
-https://www.bezkoder.com/spring-boot-r2dbc-postgresql/
+# Spring Non Blocking
+(also called spring reactive)
 
 # Bauen als native image mit GraalVM
 
 mvn -Pnative package
 
 ./mvnw -Pnative native:compile -DskipTests  
-11:23 gestartet zu bauencd tar  
-
-
 
 ## Docker + Postgresql
 https://www.baeldung.com/spring-boot-postgresql-docker
@@ -29,7 +25,6 @@ spring.r2dbc.username=postgres
 spring.r2dbc.password=123
 ```
 
-
 fill out {path_to_schema} with the correct path   
 this one is the correct docker run command:
 ```
@@ -42,7 +37,7 @@ in the end to ensure that everything docker is killed run this:
 `docker container stop <id>` // kill specific docker container   
 `docker rm $(docker ps -aq)`  // kill ALL docker containers
 
-### how to call the api
+### check if api is running
 
 curl:  
 curl -v http://localhost:8080/books
